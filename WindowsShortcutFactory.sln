@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsShortcutFactory", "WindowsShortcutFactory\WindowsShortcutFactory.csproj", "{45153EF3-6287-46EB-8A98-8FA8D2999ADC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsShortcutFactory.Tests", "WindowsShortcutFactory.Tests\WindowsShortcutFactory.Tests.csproj", "{E852568A-DABD-48FA-B606-DBDA409A8C77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45153EF3-6287-46EB-8A98-8FA8D2999ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45153EF3-6287-46EB-8A98-8FA8D2999ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45153EF3-6287-46EB-8A98-8FA8D2999ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45153EF3-6287-46EB-8A98-8FA8D2999ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E852568A-DABD-48FA-B606-DBDA409A8C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E852568A-DABD-48FA-B606-DBDA409A8C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E852568A-DABD-48FA-B606-DBDA409A8C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E852568A-DABD-48FA-B606-DBDA409A8C77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC56C49A-B711-4BC7-A8A9-DE4F77374DAE}
+	EndGlobalSection
+EndGlobal
