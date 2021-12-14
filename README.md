@@ -6,10 +6,12 @@ This is a simple .NET library for creating or modifying Windows shortcut files. 
 
 This example creates a shortcut to `C:\my\program\target.exe`:
 
-    using var shortcut = new WindowsShortcut
-    {
-        Path = @"C:\my\program\target.exe",
-        Description = "Just a simple shortcut to target.exe."
-	};
-    
-    shortcut.Save(@"C:\temp\MyShortcut.lnk");
+```csharp
+using var shortcut = new WindowsShortcut
+{
+    Path = @"C:\my\program\target.exe",
+    Description = "Just a simple shortcut to target.exe."
+};
+
+shortcut.Save(@"C:\temp\MyShortcut.lnk");
+```
