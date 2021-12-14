@@ -309,7 +309,7 @@ namespace WindowsShortcutFactory
                     var ptr = Marshal.StringToCoTaskMemUni(fileName);
                     try
                     {
-                        res = persistInst->Vtbl->Load(persistInst, ptr, (uint)fileName.Length);
+                        res = persistInst->Vtbl->Load(persistInst, ptr, 0);
                         if (res != 0)
                             throw new COMException("Unable to load shortcut file.", (int)res);
                     }

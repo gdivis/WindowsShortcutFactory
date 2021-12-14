@@ -62,7 +62,7 @@ namespace WindowsShortcutFactory.Tests
             Assert.AreEqual(loc, s.IconLocation);
         }
         [TestMethod]
-        public void TestSave()
+        public void TestSaveAndLoad()
         {
             using var s = new WindowsShortcut();
             s.Path = @"C:\my\test\path.exe";
@@ -72,6 +72,9 @@ namespace WindowsShortcutFactory.Tests
             {
                 s.Save(fileName);
                 Assert.IsTrue(File.Exists(fileName));
+
+                using var s2 = WindowsShortcut.Load(fileName);
+                Assert.AreEqual(s.Path, s2.Path);
             }
             finally
             {
