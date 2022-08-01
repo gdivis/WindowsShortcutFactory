@@ -11,6 +11,7 @@ namespace WindowsShortcutFactory
     public sealed class WindowsShortcut : IDisposable
     {
         private const uint CLSCTX_INPROC_SERVER = 0x1;
+        private const uint SLGP_RAWPATH = 4;
         private static readonly Guid CLSID_ShellLink = new("00021401-0000-0000-C000-000000000046");
         private static readonly Guid IID_IShellLinkW = new(0x000214F9, 0, 0, 0xC0, 0, 0, 0, 0, 0, 0, 0x46);
         private static readonly Guid IID_IPersistFile = new("0000010b-0000-0000-C000-000000000046");
@@ -87,7 +88,7 @@ namespace WindowsShortcutFactory
                 unsafe
                 {
                     var buffer = stackalloc char[260];
-                    uint res = this.inst->Vtbl->GetPath(this.inst, (byte*)buffer, 260, null, 0);
+                    uint res = this.inst->Vtbl->GetPath(this.inst, (byte*)buffer, 260, null, SLGP_RAWPATH);
                     if (res == 0)
                         return Marshal.PtrToStringUni(new IntPtr(buffer));
                     else
