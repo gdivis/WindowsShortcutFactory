@@ -12,6 +12,6 @@
     <Description>Simple library for creating and modifying Windows shortcut (.lnk) files. This has no dependencies and calls directly into the native IShellLink COM interfaces instead of using the Windows Script Host.</Description>
     <PackageTags>windows shortcuts</PackageTags>
     <RepositoryUrl>https://github.com/gdivis/WindowsShortcutFactory.git</RepositoryUrl>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 </Project>
