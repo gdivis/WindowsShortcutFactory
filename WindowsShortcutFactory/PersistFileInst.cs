@@ -1,10 +1,7 @@
-﻿using System.Runtime.InteropServices;
+﻿namespace WindowsShortcutFactory;
 
-namespace WindowsShortcutFactory
+[StructLayout(LayoutKind.Sequential)]
+internal struct PersistFileInst
 {
-    [StructLayout(LayoutKind.Sequential)]
-    internal struct PersistFileInst
-    {
-        public unsafe PersistFileV* Vtbl;
-    }
+    public unsafe PersistFileV* Vtbl;
 }

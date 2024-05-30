@@ -1,10 +1,7 @@
-﻿using System.Runtime.InteropServices;
+﻿namespace WindowsShortcutFactory;
 
-namespace WindowsShortcutFactory
+[StructLayout(LayoutKind.Sequential)]
+internal struct ShellLinkInst
 {
-    [StructLayout(LayoutKind.Sequential)]
-    internal struct ShellLinkInst
-    {
-        public unsafe ShellLinkV* Vtbl;
-    }
+    public unsafe ShellLinkV* Vtbl;
 }

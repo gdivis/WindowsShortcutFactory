@@ -1,17 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net452;netstandard2.0;net6.0-windows</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net6.0-windows;net8.0-windows</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>CS1591</NoWarn>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Authors>Greg Divis</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>Simple library for creating and modifying Windows shortcut (.lnk) files. This has no dependencies and calls directly into the native IShellLink COM interfaces instead of using the Windows Script Host.</Description>
     <PackageTags>windows shortcuts</PackageTags>
     <RepositoryUrl>https://github.com/gdivis/WindowsShortcutFactory.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/gdivis/WindowsShortcutFactory</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Version>1.1.0</Version>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'!='netstandard2.0'">
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\README.md" Link="README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
 </Project>
